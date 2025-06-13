@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="Counter()">Click Me</button>
+  <div id="output">You clicked 0 times</div>
+
+  <script>
+    let count = 0;
+
+    function Counter() {
+      count++;
+      document.getElementById("output").textContent = "You clicked " + count + " times";
+    }
+  </script>
+
+</body>
+</html>

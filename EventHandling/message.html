@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Text Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    #inputBox {
+      padding: 8px;
+      width: 300px;
+      font-size: 16px;
+    }
+    #display {
+      margin-top: 20px;
+      font-size: 18px;
+      color: rgb(238, 110, 5);
+    }
+  </style>
+</head>
+<body>
+
+  <label for="inputBox">Type something:</label><br>
+  <input type="text" id="inputBox" placeholder="Start typing...">
+
+  <div id="display"></div>
+
+  <script>
+    const input = document.getElementById("inputBox");
+    const output = document.getElementById("display");
+
+    input.addEventListener("input", function() {
+      output.textContent = input.value;
+    });
+  </script>
+
+</body>
+</html>
